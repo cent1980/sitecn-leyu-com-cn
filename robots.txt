@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cent1980.github.io/sitecn-leyu-com-cn/sitemap.xml
