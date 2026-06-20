@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>关于易游体育 – 站点介绍与可信说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: #f2f4f7;
+            color: #1f2a3a;
+            line-height: 1.75;
+            padding: 1.5rem 1rem;
+        }
+
+        .page-wrap {
+            max-width: 820px;
+            margin: 2rem auto;
+        }
+
+        /* hero 区 – 简洁文章标题 */
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #0e1b2d;
+            border-left: 6px solid #3b6ea5;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: #4a5b6e;
+            margin: 0 0 2rem 1.8rem;
+            font-weight: 350;
+            border-bottom: 1px solid #d0d8e0;
+            padding-bottom: 0.6rem;
+        }
+
+        /* 卡片式分区 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 20, 40, 0.04);
+            border: 1px solid #e3e9ef;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.25s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 20, 40, 0.06);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #1a2b3f;
+            display: inline-block;
+            border-bottom: 2px solid #b1c9de;
+            padding-bottom: 0.2rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            font-size: 0.99rem;
+            color: #263544;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用提示块 */
+        .insight-block {
+            background: #e9eef4;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.6rem 0 0.8rem 0;
+            border-left: 5px solid #3b6ea5;
+            font-style: normal;
+            color: #1e3247;
+        }
+
+        .insight-block strong {
+            font-weight: 600;
+            color: #1a3a5a;
+        }
+
+        .insight-block p {
+            margin-bottom: 0.4rem;
+        }
+
+        .insight-block p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 特色小标 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #f7f9fc;
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e0e7ef;
+            font-size: 0.95rem;
+        }
+
+        .feature-item span {
+            display: inline-block;
+            background: #d3dfeb;
+            color: #1a3c5e;
+            font-weight: 500;
+            width: 1.6rem;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #2b5f8a;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #2b5f8a;
+            color: #16436b;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin-top: 1.2rem;
+            border-top: 1px dashed #cdd7e2;
+            padding-top: 1.2rem;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1f334a;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            margin-left: 1rem;
+            color: #3b4c60;
+            font-size: 0.95rem;
+        }
+
+        /* 访问句 / 尾注 */
+        .footer-note {
+            margin-top: 2rem;
+            padding: 1.2rem 1.8rem;
+            background: transparent;
+            border-top: 1px solid #d8e0e9;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #42566c;
+            letter-spacing: 0.01em;
+        }
+
+        .footer-note a {
+            font-weight: 500;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e2, transparent);
+            margin: 1.6rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .hero-title {
+                font-size: 1.7rem;
+                padding-left: 1rem;
+            }
+            .hero-sub {
+                margin-left: 1rem;
+                font-size: 0.95rem;
+            }
+            .card {
+                padding: 1.3rem 1.2rem;
+            }
+            .card h2 {
+                font-size: 1.2rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .insight-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .page-wrap {
+                margin: 3rem auto;
+            }
+            .card {
+                padding: 2rem 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- 文章标题 / hero -->
+        <div class="hero-title">关于易游体育 · 站点说明</div>
+        <div class="hero-sub">一份平实的介绍，关于平台定位与可信细节</div>
+
+        <!-- 导语 + 段落1: 站点介绍 -->
+        <div class="card">
+            <h2>站点概述</h2>
+            <p>“易游体育”并不是一个突然出现的名字，它背后是一个围绕体育资讯与活动信息整合而搭建的线上站点。从最初的内容聚合到如今相对清晰的版块结构，这个平台一直尝试为使用者提供经过筛选的体育相关内容。无论你关注的是赛事动态、运动知识还是休闲体育文化，都能在其中找到一些值得阅读的段落。</p>
+            <p>站点本身保持轻量化的设计思路，没有堆砌过多的装饰性元素，重点在于让信息更直接地呈现。对于初次接触的朋友而言，<a href="https://mobi-yysports.com">易游体育</a>更像是一个安静的体育信息角落，不喧哗，但内容有自己的脉络。</p>
+        </div>
+
+        <!-- 多段正文 + 可信说明 -->
+        <div class="card">
+            <h2>关于可信与内容来源</h2>
+            <p>在信息繁杂的当下，一个站点能否被长期信赖，往往取决于它对内容的处理方式。易游体育在资料引用上倾向于采用公开可查的来源，并对部分数据做了必要的标注。运营团队会定期核对已发布的文章，修正过时的链接或数据，这一点在同类站点中并不常见，但却是认真运营的体现。</p>
+            <p>同时，网站未采用任何诱导分享或夸大的宣传措辞，也不存在隐藏的跳转或误导性按钮。从网页的加载方式到内容分类，都能看出一种“把事情讲清楚”的意图。如果你习惯在访问前先了解一个平台的底色，那么这里值得你花几分钟浏览。</p>
+            
+            <!-- 引用提示块 -->
+            <div class="insight-block">
+                <p><strong>一个小提示：</strong> 浏览时建议使用桌面或平板设备，部分早期文章在窄屏手机上的排版仍有优化空间，但核心信息完整。</p>
+                <p>另外，网站未开设第三方评论区，所有反馈均通过页面底部的联系表单收集，这在一定程度上保证了交流的秩序。</p>
+            </div>
+
+            <p>整体来看，易游体育更接近一个“信息整理型”站点，而不是流量导向的资讯瀑布流。它适合那些愿意静下来阅读的人，而不是追求即时刷新通知的用户。</p>
+        </div>
+
+        <!-- 特点 / 场景 融合卡片 -->
+        <div class="card">
+            <h2>常见使用场景与特点</h2>
+            <div class="feature-grid">
+                <div class="feature-item"><span>1</span> 运动知识入门</div>
+                <div class="feature-item"><span>2</span> 赛事背景梳理</div>
+                <div class="feature-item"><span>3</span> 休闲体育文化</div>
+                <div class="feature-item"><span>4</span> 无广告阅读体验</div>
+            </div>
+            <p style="margin-top: 1rem;">这些场景并非刻意划分，而是来自站点内容的自然分布。相比很多同类网站，易游体育在文字长度和配图数量上都比较克制，没有为了填充版面而加入无关内容。如果你正在寻找一个不被打扰、可以慢慢浏览的体育信息页面，或许可以把它加入书签。</p>
+            <p>当然，每个人对“好用”的定义不同。有人喜欢视频，有人习惯音频，而这里选择用文字和静态图像来传递内容——这本身就是一种风格取舍。</p>
+        </div>
+
+        <!-- FAQ 摘要 + 访问句 -->
+        <div class="card">
+            <h2>一些常见问题</h2>
+            <div class="faq-mini">
+                <div class="faq-q">Q: 网站需要注册才能浏览全部内容吗？</div>
+                <div class="faq-a">A: 不需要。目前所有文章和页面都可以直接访问，无需登录或注册。</div>
+            </div>
+            <div class="faq-mini">
+                <div class="faq-q">Q: 内容更新频率如何？</div>
+                <div class="faq-a">A: 大致保持每周 2–3 篇的更新节奏，遇到大型赛事期间会适当增加。</div>
+            </div>
+            <div class="faq-mini">
+                <div class="faq-q">Q: 是否接受外部投稿或合作？</div>
+                <div class="faq-a">A: 目前以内部编辑为主，暂未开放公开投稿通道，但反馈表单一直有效。</div>
+            </div>
+            <div style="margin-top: 1.4rem; border-left: 3px solid #b7c9dc; padding-left: 1rem;">
+                <p style="font-size: 0.98rem;">如果你还有其他疑问，或想对某篇文章做更深入的讨论，不妨直接访问<a href="https://mobi-yysports.com">易游体育</a>，在那里你可以找到完整的页面和最新的内容。</p>
+            </div>
+        </div>
+
+        <!-- 结尾访问句 -->
+        <div class="footer-note">
+            <p>以上是对易游体育站点的一个简要梳理。内容力求客观、清晰，不夸大也不回避细节。</p>
+            <p style="margin-top: 0.2rem;">若你有兴趣进一步了解，可以直接前往 <a href="https://mobi-yysports.com">易游体育</a> 浏览全部页面。</p>
+        </div>
+    </div>
+</body>
+</html>
