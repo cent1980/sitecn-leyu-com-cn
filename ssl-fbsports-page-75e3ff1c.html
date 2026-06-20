@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB体育 – 知识型体育平台介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+            border: 1px solid #e9edf2;
+        }
+
+        /* hero */
+        .hero {
+            text-align: center;
+            padding: 1.2rem 0 1.8rem;
+            border-bottom: 1px solid #eef1f5;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0f1a2c;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #5a6b7c;
+            background: #f4f7fb;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            border: 1px solid #dbe2eb;
+        }
+
+        .hero p {
+            margin-top: 1.2rem;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #2d3b4b;
+        }
+
+        /* 卡片通用 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e6ebf2;
+            border-radius: 20px;
+            padding: 1.8rem 1.6rem;
+            flex: 1 1 240px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #c6d2e2;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #12273e;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2d4058;
+        }
+
+        /* 说明区 + 内联卡片 */
+        .insight-block {
+            background: #f4f8fe;
+            border: 1px solid #dee7f2;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .insight-block h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-left: 4px solid #1c3f5e;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            color: #102433;
+        }
+
+        .insight-block p {
+            margin-bottom: 1rem;
+        }
+
+        .insight-block a {
+            color: #1a4b6d;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #9bb4cd;
+        }
+
+        .insight-block a:hover {
+            border-bottom: 1px solid #1a4b6d;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin: 2.2rem 0 1.5rem;
+        }
+
+        .faq-mini h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #1d2e41;
+        }
+
+        .faq-item {
+            background: #fafcff;
+            border: 1px solid #e6ecf5;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #1b334a;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #30445c;
+            font-size: 0.95rem;
+        }
+
+        /* 底部链接 */
+        .bottom-note {
+            margin-top: 2.5rem;
+            text-align: center;
+            border-top: 1px solid #e2e9f1;
+            padding-top: 1.8rem;
+            font-size: 0.95rem;
+            color: #3f556c;
+        }
+
+        .bottom-note a {
+            color: #0f2f4c;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #bccbd9;
+        }
+
+        .bottom-note a:hover {
+            border-bottom: 1px solid #0f2f4c;
+        }
+
+        .bottom-note .meta {
+            color: #60758b;
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .container {
+                padding: 1.8rem 1rem;
+                border-radius: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                flex: 1 1 100%;
+                padding: 1.4rem;
+            }
+
+            .insight-block {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .faq-item {
+                padding: 0.8rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero 区 -->
+    <div class="hero">
+        <h1>FB体育 · 持续关注的理由</h1>
+        <span class="sub">不只是入口，更是日常信息锚点</span>
+        <p>对体育内容有长期需求的用户，往往会在多个平台之间切换。<br>
+        但真正值得收藏并反复回顾的，是那些保持更新节奏、信息结构稳定的地方。<br>
+        <strong>FB体育</strong> 正是这样一个可以建立再次访问习惯的聚合节点。</p>
+    </div>
+
+    <!-- 优势区：卡片 -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>🎯 回访友好</h3>
+            <p>内容版块按赛季与事件整理，每次回归都能快速定位你关心的领域。不需要从头适应界面变化。</p>
+        </div>
+        <div class="card">
+            <h3>📌 收藏价值</h3>
+            <p>数据与解读并重，适合作为长期参考源。无论关注联赛、球员还是战术趋势，都能找到知识坐标。</p>
+        </div>
+        <div class="card">
+            <h3>🔄 持续生长</h3>
+            <p>不是一次性信息堆砌，而是伴随赛季与事件动态更新的内容生态。保持订阅心态即可获得稳定输出。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：再次访问与收藏视角 -->
+    <div class="insight-block">
+        <h2>从「偶然到访」到「主动回访」</h2>
+        <p>很多体育信息页面只适合一次性浏览。但如果你发现自己不止一次想查阅同一类分析，或需要回顾某个赛段的完整脉络，那么一个组织有序、更新可预测的平台就变得重要。<br>
+        在长期使用场景中，<a href="https://ssl-fbsports.com">FB体育</a> 提供了相对稳定的分类体系：赛事数据、背景梳理、专题整合，都按照统一的逻辑存放。这降低了每次访问的认知负担——你不需要重新学习页面结构。</p>
+        <p>收藏一个页面，本质上是收藏一种信息组织方式。当内容持续迭代但核心框架保持连贯，回访就不再是负担，而是自然的知识延伸。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <h2>常见关注点摘要</h2>
+        <div class="faq-item">
+            <strong>📆 内容更新频率如何？</strong>
+            <p>围绕主流联赛与重要赛事周期进行更新，节奏大体与赛季同步。低谷期也会有回顾与分析内容填充。</p>
+        </div>
+        <div class="faq-item">
+            <strong>📚 适合什么类型的读者？</strong>
+            <p>适合希望超越单纯比分、理解比赛背景与逻辑的读者。也适合想建立个人体育知识框架的长期关注者。</p>
+        </div>
+        <div class="faq-item">
+            <strong>🔖 收藏后如何高效使用？</strong>
+            <p>建议按赛季或专题分类收藏对应页面；也可以定期回来浏览最新整合内容，保持信息同步。</p>
+        </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="bottom-note">
+        <p>如果你希望将 <a href="https://ssl-fbsports.com">FB体育</a> 纳入你的体育信息回访列表，不妨花几分钟熟悉一下内容分区。<br>
+        持续关注的价值，往往在多次访问之后才会显现。</p>
+        <div class="meta">— 知识型体育内容 · 非官方介绍页 —</div>
+    </div>
+
+</div>
+</body>
+</html>
